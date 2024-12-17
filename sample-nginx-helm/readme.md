@@ -15,3 +15,7 @@ helm upgrade test ./my-nginx-chart
 
 helm rollback test
 ```
+#### Note
+```textmate
+In a Helm chart, {{ .Release.Name }} is a built-in Helm variable that represents the name of the release. When you install a chart using Helm, you provide a release name (e.g., test), or Helm auto-generates one if you don't specify it. This value is then used within the templates to differentiate resources created by the chart.
+```
